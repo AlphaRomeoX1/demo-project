@@ -1,7 +1,5 @@
 node {
-  stage('Clone the Git') {
-    git 'https://github.com/AlphaRomeoX1/demo-project.git'
-  }
+  
   stage('SonarQube analysis') {
     def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
