@@ -1,7 +1,7 @@
 node {
   
   stage('SonarQube analysis') {
-    def scannerHome = tool 'sonar';
+    def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
       sh "${scannerHome}/bin/sonar-scanner \
       -D sonar.login=admin \
