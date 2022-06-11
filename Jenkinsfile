@@ -2,7 +2,7 @@
    
    node {
   stage('SCM') {
-    git 'https://github.com/foo/bar.git'
+    git 'https://github.com/AlphaRomeoX1/demo-project.git'
   }
   stage('SonarQube analysis') {
     withSonarQubeEnv(credentialsId: 'Jenkinssonar', installationName: 'http://localhost:9000/') { // You can override the credential to be used
