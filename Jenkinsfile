@@ -14,6 +14,7 @@ stage("UPLOAD TO JFROG")
     git url: 'https://github.com/AlphaRomeoX1/demo-project.git'
 
     // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
+        
     def server = Artifactory.server "jfrog"
 
     // Read the upload spec and upload files to Artifactory.
@@ -21,9 +22,9 @@ stage("UPLOAD TO JFROG")
             '''{
             "files": [
                 {
-                    "pattern": "**/*",
+                    "pattern": "libs-snapshot-local/*.zip",
                     "target": "dependencies/",
-                    
+                    "props": "p1=v1;p2=v2"
                 }
             ]
         }'''
@@ -35,13 +36,13 @@ stage("UPLOAD TO JFROG")
             '''{
             "files": [
                 {
-                    "pattern": "**/*",
+                    "pattern": "resources/Kermit.*",
                     "target": "libs-snapshot-local",
-                  
+                    "props": "p1=v1;p2=v2"
                 },
                 {
-                     "pattern": "**/*",
-                    "target": "dependencies/"
+                    "pattern": "resources/Frogger.*",
+                    "target": "libs-snapshot-local"
                 }
             ]
         }'''
