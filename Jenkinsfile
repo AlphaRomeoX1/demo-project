@@ -11,7 +11,6 @@ node {
   
   rtUpload (
     serverId: 'jfrog',
-    specPath: 'path/to/spec/relative/to/workspace/spec.json',
     failNoOp: true,
  
     // Optional - Associate the uploaded files with the following custom build name and build number.
