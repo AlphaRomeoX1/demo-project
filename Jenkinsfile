@@ -10,7 +10,7 @@ node {
   }
   
   rtUpload (
-    serverId: 'Artifactory-1',
+    serverId: 'jfrog',
     specPath: 'path/to/spec/relative/to/workspace/spec.json',
     failNoOp: true,
  
