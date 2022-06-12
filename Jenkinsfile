@@ -9,7 +9,7 @@ node {
     }
   }
   
-stage("UPLOAD TO JFROG)
+stage("UPLOAD TO JFROG")
       {
     git url: https://github.com/AlphaRomeoX1/demo-project.git
 
