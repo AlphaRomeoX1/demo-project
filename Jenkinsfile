@@ -21,9 +21,9 @@ stage("UPLOAD TO JFROG")
             '''{
             "files": [
                 {
-                    "pattern": "libs-snapshot-local/*.zip",
+                    "pattern": "**/*",
                     "target": "dependencies/",
-                    "props": "p1=v1;p2=v2"
+                    
                 }
             ]
         }'''
@@ -35,13 +35,13 @@ stage("UPLOAD TO JFROG")
             '''{
             "files": [
                 {
-                    "pattern": "resources/Kermit.*",
+                    "pattern": "**/*",
                     "target": "libs-snapshot-local",
-                    "props": "p1=v1;p2=v2"
+                  
                 },
                 {
-                    "pattern": "resources/Frogger.*",
-                    "target": "libs-snapshot-local"
+                     "pattern": "**/*",
+                    "target": "dependencies/"
                 }
             ]
         }'''
