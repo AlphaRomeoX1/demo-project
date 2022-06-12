@@ -11,7 +11,7 @@ node {
   
 stage("UPLOAD TO JFROG")
       {
-    git url: https://github.com/AlphaRomeoX1/demo-project.git
+    git url: 'https://github.com/AlphaRomeoX1/demo-project.git'
 
     // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
     def server = Artifactory.server "jfrog"
