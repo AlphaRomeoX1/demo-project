@@ -55,7 +55,6 @@ if (buildInfo.getArtifacts().size() > 0) {
 }
         def buildInfo = Artifactory.newBuildInfo()
 buildInfo.project = 'my-jfrog-project-key'
-...
 server.publishBuildInfo buildInfo
         def buildInfo = Artifactory.newBuildInfo()
 buildInfo.env.capture = true
